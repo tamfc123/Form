@@ -1,10 +1,11 @@
 import React from 'react'
 import './App.css';
-import Formlogin from './compoments/formlogin';
+import FormSignUp from './compoments/formlogin';
+import FormSignIn from './compoments/formsignin';
 function App() {
   return (
        <>
-          <Formlogin/>
+          <FormSignIn/>
       </>   
   );
 }

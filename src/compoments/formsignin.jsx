@@ -1,5 +1,4 @@
-
-import './formlogin.css'
+import './formsignin.css'
 import React, { useState } from "react";
 import {SiFacebook} from "react-icons/si"
 import {AiFillGoogleCircle} from "react-icons/ai"
@@ -51,7 +50,7 @@ const containerStyle = {
     flexDirection: 'column',
     alignItems: 'center',
 };
-const FormSignUp = () => {
+const FormSignIn = () => {
     const [showPassword, setShowPassword] = React.useState(false);
     const handleClickShowPassword = () => setShowPassword((show) => !show);
     const handleMouseDownPassword = (event) => {
@@ -71,7 +70,7 @@ const FormSignUp = () => {
                 sx={{
                     marginTop: '15%', 
                 }}>
-                Create account
+                SignIn
             </Typography>
             <form onSubmit={handleSubmit}>
                 <div className="social-container">
@@ -79,22 +78,17 @@ const FormSignUp = () => {
                     <Link href="#"><AiFillGoogleCircle/></Link>
                     <Link href="#"><SiFacebook/></Link>
                 </div>
-                <p>or use your email for registration</p>
+                <p>or use your account</p>
                 <TextField 
                     fullWidth 
                     size="small" 
-                    id="margin-dense" margin="dense"
-                    color="success"                   
-                    label="Name" 
-                    variant="outlined" />
-                <TextField 
-                    fullWidth 
-                    size="small" 
-                    id="margin-dense" margin="dense"
+                    id="margin-normal" 
+                    margin="normal"
                     color="success" 
+                    
                     label="Email" 
                     variant="outlined" />
-                <FormControl fullWidth size="small" id="margin-dense" margin="dense" variant="outlined" color="success">
+                <FormControl fullWidth size="small" variant="outlined" color="success">
                     <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
                     <OutlinedInput
                         id="outlined-adornment-password"
@@ -126,7 +120,7 @@ const FormSignUp = () => {
                     Forget your password?
                 </Link>
                 <ThemeProvider theme={theme}>
-                    <Button style={buttonStyle} variant="contained" color="primary">Sign up</Button>
+                    <Button style={buttonStyle} variant="contained" color="primary">Sign in</Button>
                 </ThemeProvider>
             </form>    
         </Container>
@@ -134,4 +128,4 @@ const FormSignUp = () => {
     )
 }
 
-export default FormSignUp;
+export default FormSignIn;
